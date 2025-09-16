@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Desert Line Ltd. — Clone</title>
+  <meta name="description" content="Clone of Desert Line Ltd. website (single-file template). Replace text/images with originals as needed." />
+  <style>
+    /* Simple responsive reset */
+    :root{--accent:#0b5ed7;--dark:#222;--muted:#666}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.5;margin:0;color:var(--dark)}
+    a{color:inherit;text-decoration:none}
+    header{background:#fff;border-bottom:1px solid #eee}
+    .container{max-width:1100px;margin:0 auto;padding:0 18px}
+
+    /* Top bar */
+    .topbar{display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-size:14px;color:var(--muted)}
+    .topbar .contacts{display:flex;gap:18px;align-items:center}
+
+    /* Nav */
+    nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:48px}
+    .navlinks{display:flex;gap:18px;align-items:center}
+    .cta{background:var(--accent);color:#fff;padding:8px 14px;border-radius:6px}
+
+    /* Hero slider */
+    .hero{position:relative;overflow:hidden;border-radius:6px;margin:20px 0}
+    .slides{display:flex;transition:transform .5s ease}
+    .slide{min-width:100%;padding:40px;background:#f8f9fb;display:flex;flex-direction:column;gap:18px}
+    .slide h1{margin:0;font-size:28px}
+    .slide p{margin:0;color:var(--muted)}
+    .slider-controls{position:absolute;left:16px;right:16px;bottom:16px;display:flex;justify-content:space-between}
+
+    /* Sections */
+    section{padding:28px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;border:1px solid #eee;padding:18px;border-radius:8px}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .gallery img{width:100%;height:140px;object-fit:cover;border-radius:6px}
+
+    /* Contact */
+    .contact{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    form input, form textarea{width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;margin-bottom:10px}
+    form button{background:var(--accent);color:#fff;padding:10px 14px;border:0;border-radius:6px}
+
+    footer{background:#111;color:#fff;padding:22px 0;margin-top:22px}
+
+    /* Responsive */
+    @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}.contact{grid-template-columns:1fr}.topbar{font-size:13px}}
+    @media (max-width:600px){.navlinks{display:none}.brand img{height:40px}.slide h1{font-size:22px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div>H#79, Block-M/1, Banani, Dhaka-1213</div>
+      <div class="contacts">
+        <div>+8801603549915</div>
+        <div><a href="#contact">desertlineltd1@gmail.com</a></div>
+      </div>
+    </div>
+    <div class="container" style="border-top:0">
+      <nav>
+        <div class="brand">
+          <!-- Replace src with actual logo -->
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='40'><rect width='160' height='40' fill='%230b5ed7'/><text x='10' y='26' font-family='Arial' font-size='14' fill='white'>Desert Line Ltd.</text></svg>" alt="Logo">
+        </div>
+        <div class="navlinks">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#projects">Our Projects</a>
+          <a href="#documents">Documents</a>
+          <a href="#contact">Contact</a>
+          <a class="cta" href="#contact">Contact us</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero / Slider -->
+    <div class="hero" id="home">
+      <div class="slides" id="slides">
+        <div class="slide" style="background-image:linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url('');background-size:cover;">
+          <h1>OVERSEAS MANPOWER RECRUITMENT</h1>
+          <p>Desert Line Ltd. offers tailored overseas manpower recruitment solutions, connecting businesses with skilled professionals worldwide.</p>
+          <a class="cta" href="#contact">Contact us</a>
+        </div>
+        <div class="slide">
+          <h1>SUPPLY & CONTRACTOR</h1>
+          <p>We provide reliable supply and contractor services to support various industries with high-quality materials and skilled professionals.</p>
+          <a class="cta" href="#contact">Contact us</a>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button id="prev">◀</button>
+        <button id="next">▶</button>
+      </div>
+    </div>
+
+    <!-- Notices / Jobs -->
+    <section>
+      <h3>নিয়োগ বিজ্ঞপ্তি</h3>
+      <div class="card">
+        <p>সৌদি আরবে কাজের সুবর্ণ সুযোগ! আবাসিক হোটেল, রেষ্টুরেন্ট, হাসপাতাল, এয়ারপোর্ট এবং মার্কেট ক্লিনার, সেলস ম্যান, কন্সট্রাকশন সেক্টর ইত্যাদি।</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>ABOUT COMPANY</h2>
+      <p>Desert Line Limited is a government-approved manpower exporter (License No. RL 2756), specialized in supplying skilled and unskilled labor to global markets. We are also a registered contractor and supplier for LGED and PWD.</p>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <h2>Our Service</h2>
+      <div class="grid">
+        <div class="card"><h4>OVERSEAS MANPOWER RECRUITMENT</h4><p>Full-cycle recruitment for international placement.</p></div>
+        <div class="card"><h4>SUPPLY & CONTRACTOR</h4><p>Contracting and procurement for construction projects.</p></div>
+        <div class="card"><h4>AIR TICKETING</h4><p>Travel and air ticketing support for candidates and staff.</p></div>
+        <div class="card"><h4>UMRAH PACKAGE</h4><p>Religious travel arrangements and packages.</p></div>
+        <div class="card"><h4>LAND DEVELOPING</h4><p>Land development and infrastructure services.</p></div>
+        <div class="card"><h4>OUTSOURCING</h4><p>Outsourcing solutions for business operations.</p></div>
+      </div>
+    </section>
+
+    <!-- Business / Gallery -->
+    <section id="gallery">
+      <h2>Our Business & Gallery</h2>
+      <div class="gallery">
+        <!-- Replace src with real images or hotlink to originals -->
+        <img src="https://via.placeholder.com/400x300?text=Image+1" alt="Gallery 1">
+        <img src="https://via.placeholder.com/400x300?text=Image+2" alt="Gallery 2">
+        <img src="https://via.placeholder.com/400x300?text=Image+3" alt="Gallery 3">
+        <img src="https://via.placeholder.com/400x300?text=Image+4" alt="Gallery 4">
+        <img src="https://via.placeholder.com/400x300?text=Image+5" alt="Gallery 5">
+        <img src="https://via.placeholder.com/400x300?text=Image+6" alt="Gallery 6">
+        <img src="https://via.placeholder.com/400x300?text=Image+7" alt="Gallery 7">
+        <img src="https://via.placeholder.com/400x300?text=Image+8" alt="Gallery 8">
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact">
+        <div>
+          <p>Desert Line Limited – Government-Approved Manpower Exporter (License No. RL 2756)</p>
+          <p>Managing Director: +8801603549915</p>
+          <p>Address: Shikder Plaza, H#79 (1st Floor), Block-M/1, New Airport Road, Banani, Dhaka-1213.</p>
+          <p>Email: desertlineltd1@gmail.com</p>
+        </div>
+        <div>
+          <form id="contactForm">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="phone" placeholder="Phone">
+            <textarea name="message" rows="5" placeholder="Message"></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+        <div>© 2025 Desert Line LTD.</div>
+        <div>Important Links: <a href="https://probashi.gov.bd">probashi.gov.bd</a> · <a href="https://bmet.gov.bd">bmet.gov.bd</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple slider
+    (function(){
+      const slides = document.getElementById('slides');
+      const total = slides.children.length;
+      let idx = 0;
+      function show(i){ slides.style.transform = `translateX(-${i*100}%)`; }
+      document.getElementById('next').addEventListener('click', ()=>{ idx = (idx+1)%total; show(idx); });
+      document.getElementById('prev').addEventListener('click', ()=>{ idx = (idx-1+total)%total; show(idx); });
+      // autoplay
+      setInterval(()=>{ idx = (idx+1)%total; show(idx); }, 6000);
+
+      // contact form simple handler (demo)
+      document.getElementById('contactForm').addEventListener('submit', function(e){
+        e.preventDefault();
+        alert('Message sent (demo). Replace this with AJAX/SMTP integration on the server.');
+        this.reset();
+      });
+    })();
+  </script>
+</body>
+</html>
